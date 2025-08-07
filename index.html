@@ -1,47 +1,76 @@
 <!doctype html>
-<html lang="en">
+<html lang="uk">
 <head>
-	<meta charset="UTF-8">
-	<title>About me</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ruslan Iskov — About Me</title>
+  <meta name="description" content="Особиста сторінка Руслана Іськова. Контакти, фото, інформація.">
+  <link rel="icon" href="me.jpg" type="image/jpeg">
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@2.0.6/css/pico.min.css">
+  <style>
+    :root {
+      --pico-background-color: #181a1b;
+      --pico-card-background-color: #23272a;
+      --pico-primary: #00bfff;
+      --pico-contrast: #fff;
+      --pico-border-radius: 1.2rem;
+    }
+    body { background: var(--pico-background-color); color: var(--pico-contrast); }
+    main { max-width: 700px; margin: 2rem auto; }
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid var(--pico-primary);
+      box-shadow: 0 0 0 4px #23272a;
+      background: #23272a;
+      margin-bottom: 1rem;
+    }
+    .contact-list a { color: #00bfff; font-weight: bold; }
+    .contact-list li { margin-bottom: 0.5rem; }
+    .contact-list { 
+      list-style-type: none !important; 
+      list-style: none !important; 
+      padding-left: 0 !important; 
+      margin: 0;
+    }
+    .contact-list li::before {
+      content: none !important;
+    }
+    .contact-list li::marker {
+      content: none !important;
+    }
+    @media (max-width: 600px) {
+      .profile-img { width: 100px; height: 100px; }
+      main { padding: 1rem; }
+    }
+  </style>
 </head>
 <body>
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				<div class="jumbotron">
-					<h1 class="display-3">Ruslan Iskov</h1>
-					<p class="lead display-5">aka Руслан Іськов</p>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-4">
-				<div class="card">
-					<img class="img-fluid rounded-circle" src="me.jpg" alt="Photo of mine">
-				</div>>
-				
-			</div>
-			<div class="col-8">
-				<div class="card">
-					<div class="card-body">
-						<h2 class="card-title">GET IN TOUCH</h2>
-						<ul class="list-group list-group-flush">
-							<li class="list-group-item">
-								Skype: <a href="callto:ruslan.rv.ua" class="card-link">ruslan.rv.ua</a>
-							</li>
-							<li class="list-group-item">
-								E-mail: <a href="mailto:ruslan.rv.ua+website@gmail.com" class="card-link">ruslan.rv.ua{GoogleMail}</a>
-							</li>
-							<li class="list-group-item">
-								Mobile: <a href="callto:+380981993959" class="card-link">+380 (98) 199-39-59</a>
-							</li>
-						</ul>
-
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+  <main aria-label="Про мене">
+    <section style="text-align:center;">
+      <img src="me.jpg" alt="Фото Руслана Іськова" class="profile-img" aria-label="Фото Руслана Іськова">
+      <h1>Ruslan Iskov</h1>
+      <p>aka <span lang="uk">Руслан Іськов</span></p>
+    </section>
+    <section aria-labelledby="contact-heading" style="margin-top:2rem;">
+      <h2 id="contact-heading">Let's Connect / Давайте зв'яжемося</h2>
+      <ul class="contact-list" aria-label="Контактна інформація">
+        <li>
+          <span aria-label="Електронна пошта">E-mail:</span> <a href="mailto:ruslan.rv.ua@gmail.com" rel="noopener" aria-label="Email Ruslan Iskov">ruslan.rv.ua@gmail.com</a>
+        </li>
+        <li>
+          <span aria-label="GitHub">GitHub:</span> <a href="https://github.com/ruslan-rv-ua" rel="noopener" target="_blank" aria-label="GitHub Ruslan Iskov">github.com/ruslan-rv-ua</a>
+        </li>
+        <li>
+          <span aria-label="Telegram">Telegram:</span> <a href="https://t.me/ruslan_rv_ua" rel="noopener" target="_blank" aria-label="Telegram Ruslan Iskov">@ruslan_rv_ua</a>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer style="text-align:center; margin-top:2rem; opacity:0.7; font-size:0.9em;">
+    <span>&copy; 2025 Ruslan Iskov</span>
+  </footer>
 </body>
 </html>
