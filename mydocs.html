@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ruslan Iskov — My Documents</title>
+  <meta name="description" content="Документи та корисні матеріали від Руслана Іськова.">
+  <link rel="icon" href="me.jpg" type="image/jpeg">
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@2.0.6/css/pico.min.css">
+  <style>
+    :root {
+      --pico-background-color: #181a1b;
+      --pico-card-background-color: #23272a;
+      --pico-primary: #00bfff;
+      --pico-contrast: #fff;
+      --pico-border-radius: 1.2rem;
+    }
+    body { 
+      background: var(--pico-background-color); 
+      color: var(--pico-contrast); 
+    }
+    main { 
+      max-width: 800px; 
+      margin: 2rem auto; 
+      padding: 0 1rem;
+    }
+    .docs-section {
+      background: var(--pico-card-background-color);
+      border-radius: var(--pico-border-radius);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border: 1px solid #333;
+    }
+    .docs-section h2 {
+      color: var(--pico-primary);
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+    .docs-list {
+      list-style-type: none !important;
+      list-style: none !important;
+      padding-left: 0 !important;
+      margin: 0;
+    }
+    .docs-list li {
+      margin-bottom: 0.8rem;
+    }
+    .docs-list li::before {
+      content: none !important;
+    }
+    .docs-list li::marker {
+      content: none !important;
+    }
+    .docs-list a {
+      color: #00bfff;
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      background: rgba(0, 191, 255, 0.1);
+      border: 1px solid rgba(0, 191, 255, 0.3);
+      transition: all 0.3s ease;
+    }
+    .docs-list a:hover {
+      background: rgba(0, 191, 255, 0.2);
+      border-color: var(--pico-primary);
+      transform: translateY(-2px);
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: #888;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .back-link:hover {
+      color: var(--pico-primary);
+    }
+    .back-link::before {
+      content: "← ";
+    }
+    .empty-section {
+      color: #888;
+      font-style: italic;
+    }
+    @media (max-width: 600px) {
+      main { 
+        padding: 1rem;
+        margin: 1rem auto;
+      }
+      .docs-section {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main aria-label="Мої документи">
+    <a href="index.html" class="back-link" aria-label="Повернутися на головну">Головна сторінка</a>
+    
+    <header style="text-align: center; margin-bottom: 2rem;">
+      <h1>My Documents</h1>
+      <p style="color: #888; font-size: 1.1rem;">Документи та корисні матеріали</p>
+    </header>
+
+    <section class="docs-section" aria-labelledby="crypto-heading">
+      <h2 id="crypto-heading">Криптовалюти / Crypto</h2>
+      <ul class="docs-list" aria-label="Документи про криптовалюти">
+        <li>
+          <a href="docs/crypto/atomic_wallet.html" rel="noopener" aria-label="Atomic Wallet - інформація про гаманець">
+            Atomic Wallet
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Приклад додаткової секції для майбутніх документів -->
+    <!-- 
+    <section class="docs-section" aria-labelledby="programming-heading">
+      <h2 id="programming-heading">Програмування / Programming</h2>
+      <ul class="docs-list" aria-label="Документи про програмування">
+        <li class="empty-section">Документи скоро будуть додані...</li>
+      </ul>
+    </section>
+    -->
+
+  </main>
+
+  <footer style="text-align: center; margin-top: 3rem; opacity: 0.7; font-size: 0.9em;">
+    <span>&copy; 2025 Ruslan Iskov</span>
+  </footer>
+</body>
+</html>
