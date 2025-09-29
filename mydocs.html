@@ -117,6 +117,49 @@
       <p style="color: #888; font-size: 1.1rem;">Документи та корисні матеріали</p>
     </header>
 
+   <!--
+    Instructions for language models and scripts
+
+    Rules for adding files from the /docs folder to this page:
+
+    1) Only add files that physically exist under the /docs folder or its subfolders.
+
+    2) For each top-level folder inside /docs create a section using an H2 heading.
+      Example: <h2>Natalie</h2>
+
+    3) For nested subfolders use H3 headings with a short readable name.
+      Example: <h3>Certificates</h3>
+
+    4) Each file must be represented as a list item inside <ul class="docs-list">.
+      Use relative links in the format: docs/<folder>/<file-name.ext>.
+      For PDF files add target="_blank" so they open in a new tab.
+
+    5) All anchor tags must include rel="noopener" and a concise aria-label describing the file.
+
+    6) Do NOT include filesystem paths or technical notes in headings. Headings should be
+      human-readable folder or section names only (no "/ Crypto (docs/crypto/)"-style text).
+
+    7) Preserve the existing visual structure and classes: sections use class="docs-section",
+      lists use class="docs-list".
+
+    8) If a filename is a long slug, add a short human-readable description in the aria-label or
+      in parenthesis after the link text — do not put it into the heading.
+
+    9) After making changes, return the updated file for review. Do not push silent site changes
+      without confirmation.
+
+    Example HTML snippet to add a file:
+
+    <section class="docs-section" aria-labelledby="example-heading">
+      <h2 id="example-heading">Folder Name</h2>
+      <h3>Nested Name (if needed)</h3>
+      <ul class="docs-list">
+       <li><a href="docs/folder/file.pdf" target="_blank" rel="noopener" aria-label="Short description">File Title</a></li>
+      </ul>
+    </section>
+
+   -->
+
     <section class="docs-section" aria-labelledby="crypto-heading">
       <h2 id="crypto-heading">Криптовалюти</h2>
       <ul class="docs-list" aria-label="Документи про криптовалюти">
